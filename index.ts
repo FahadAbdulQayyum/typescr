@@ -2,38 +2,41 @@
 //*******************//
 //*******************//
 //*******************//
+// const img: HTMLImageElement = document.createElement("img");
 //*******************//
-// type Student = { name: string; roll: number };
-type Student = { name: string; roll: number; greet(msg: string): void };
-// const student: Student = { name: "Fahad", roll: 45843 };
-const student: Student = {
-  name: "Fahad",
-  roll: 45843,
-  greet(n) {
-    console.log("n::", n);
-  },
-}; //greet don't work
-// type Student = { name: string; roll: number };
-console.log("student::", student);
-interface Teacher {
-  name: string;
-  salary: number;
-}
-// const teacher: Teacher = { name: "Gohar", salary: 700, age: 50 };
-const teacher: Teacher = {
-  name: "Gohar",
-  salary: 700,
-  age: 50,
-  greet(n) {
-    console.log("n:", n);
-  },
-};
-console.log("teacher:", teacher);
-interface Teacher {
-  age: number;
-  greet(msg: string): void;
-}
+// // type Student = { name: string; roll: number };
+// type Student = { name: string; roll: number; greet(msg: string): void };
+// // const student: Student = { name: "Fahad", roll: 45843 };
+// const student: Student = {
+//   name: "Fahad",
+//   roll: 45843,
+//   greet(n) {
+//     console.log("n::", n);
+//   },
+// }; //greet don't work
+// // type Student = { name: string; roll: number };
+// console.log("student::", student);
+// interface Teacher {
+//   name: string;
+//   salary: number;
+// }
+// // const teacher: Teacher = { name: "Gohar", salary: 700, age: 50 };
+// const teacher: Teacher = {
+//   name: "Gohar",
+//   salary: 700,
+//   age: 50,
+//   greet(n) {
+//     console.log("n:", n);
+//   },
+// };
+// console.log("teacher:", teacher);
+// interface Teacher {
+//   age: number;
+//   greet(msg: string): void;
+// }
+
 //*******************//
+
 // enum Days {
 //   Sunday,
 //   Monday,
