@@ -1,23 +1,63 @@
-// const student: Student = { name: "Fahad", roll: 45843 };
-var student = {
-    name: "Fahad",
-    roll: 45843,
-    greet: function (n) {
-        console.log("n::", n);
-    },
-}; //greet don't work
-// type Student = { name: string; roll: number };
-console.log("student::", student);
-// const teacher: Teacher = { name: "Gohar", salary: 700, age: 50 };
-var teacher = {
-    name: "Gohar",
-    salary: 700,
-    age: 50,
-    greet: function (n) {
-        console.log("n:", n);
-    },
-};
-console.log("teacher:", teacher);
+//*******************//
+//*******************//
+//*******************//
+var Color;
+(function (Color) {
+    Color[Color["Red"] = 0] = "Red";
+    Color[Color["Green"] = 1] = "Green";
+    Color[Color["Blue"] = 2] = "Blue";
+})(Color || (Color = {}));
+var c = Color.Red;
+var Color1;
+(function (Color1) {
+    Color1[Color1["Red"] = 1] = "Red";
+    Color1[Color1["Green"] = 2] = "Green";
+    Color1[Color1["Blue"] = 3] = "Blue";
+})(Color1 || (Color1 = {}));
+var colorName = Color1[2];
+console.log(colorName);
+var Color2;
+(function (Color2) {
+    Color2[Color2["Red"] = 1] = "Red";
+    Color2[Color2["Green"] = 2] = "Green";
+    Color2[Color2["Blue"] = 4] = "Blue";
+})(Color2 || (Color2 = {}));
+var colorIndex = Color2["Blue"];
+console.log(colorIndex);
+//*******************//
+// const img: HTMLImageElement = document.createElement("img");
+// console.log(Math.floor(1.2));
+//*******************//
+// // type Student = { name: string; roll: number };
+// type Student = { name: string; roll: number; greet(msg: string): void };
+// // const student: Student = { name: "Fahad", roll: 45843 };
+// const student: Student = {
+//   name: "Fahad",
+//   roll: 45843,
+//   greet(n) {
+//     console.log("n::", n);
+//   },
+// }; //greet don't work
+// // type Student = { name: string; roll: number };
+// console.log("student::", student);
+// interface Teacher {
+//   name: string;
+//   salary: number;
+// }
+// // const teacher: Teacher = { name: "Gohar", salary: 700, age: 50 };
+// const teacher: Teacher = {
+//   name: "Gohar",
+//   salary: 700,
+//   age: 50,
+//   greet(n) {
+//     console.log("n:", n);
+//   },
+// };
+// console.log("teacher:", teacher);
+// interface Teacher {
+//   age: number;
+//   greet(msg: string): void;
+// }
 //*******************//
 // enum Days {
 //   Sunday,
