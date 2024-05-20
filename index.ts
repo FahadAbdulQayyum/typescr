@@ -3,6 +3,7 @@
 //*******************//
 //*******************//
 // const img: HTMLImageElement = document.createElement("img");
+console.log(Math.floor(1.2));
 //*******************//
 // // type Student = { name: string; roll: number };
 // type Student = { name: string; roll: number; greet(msg: string): void };
