@@ -1,30 +1,90 @@
 //*******************//
 //*******************//
 //*******************//
-enum Color {
-  Red,
-  Green,
-  Blue,
+//*******************//
+//*******************//
+//*******************//
+//*******************//
+//*******************//
+//*******************//
+//*******************//
+class C {
+  _len: number = 0;
+  get length() {
+    return this._len;
+  }
+
+  set length(val: number) {
+    this._len = val;
+  }
 }
-var c: Color = Color.Red;
+let c: C = new C();
+// c._len = 2;
+c.length = 4;
+console.log("c.lne", c._len);
+// console.log("c.lne", c.);
 
-enum Color1 {
-  Red = 1,
-  Green,
-  Blue,
-}
+//*******************//
 
-var colorName: string = Color1[2];
-console.log(colorName);
+// class Point {
+//   //   x: number;
+//   x!: number;
+//   constructor() {
+//     // this.x = 4;
+//   }
+// }
 
-enum Color2 {
-  Red = 1,
-  Green = 2,
-  Blue = 4,
-}
+//*******************//
 
-var colorIndex = Color2["Blue"];
-console.log(colorIndex);
+// // const tuple: readonly (number | string)[] = [2024, "Fahad"];
+// let tuple: readonly (number | string)[] = [2024, "Fahad"];
+// tuple = [2025, "Fahad"];
+// console.log("tuple:", tuple);
+//*******************//
+// // let array1: number[] = [1, 2, 3, 4];
+// // let array2: Array<number> = [1, 2, 3, 4];
+
+// function delay(m: number): Promise<void> {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       resolve();
+//       reject();
+//     }, m);
+//   });
+// }
+
+// delay(1000)
+//   .then(() => console.log("This delay is over"))
+//   .catch((error) => console.error("Something went wrong:", error))
+//   .finally(() => console.log("This is always executed"));
+
+//*******************//
+
+// enum Color {
+//   Red,
+//   Green,
+//   Blue,
+// }
+// var c: Color = Color.Red;
+
+// enum Color1 {
+//   Red = 1,
+//   Green,
+//   Blue,
+// }
+
+// var colorName: string = Color1[2];
+// console.log(colorName);
+
+// enum Color2 {
+//   Red = 1,
+//   Green = 2,
+//   Blue = 4,
+// }
+
+// var colorIndex = Color2["Blue"];
+// console.log(colorIndex);
+
 //*******************//
 // const img: HTMLImageElement = document.createElement("img");
 // console.log(Math.floor(1.2));

@@ -1,29 +1,83 @@
 //*******************//
 //*******************//
 //*******************//
-var Color;
-(function (Color) {
-    Color[Color["Red"] = 0] = "Red";
-    Color[Color["Green"] = 1] = "Green";
-    Color[Color["Blue"] = 2] = "Blue";
-})(Color || (Color = {}));
-var c = Color.Red;
-var Color1;
-(function (Color1) {
-    Color1[Color1["Red"] = 1] = "Red";
-    Color1[Color1["Green"] = 2] = "Green";
-    Color1[Color1["Blue"] = 3] = "Blue";
-})(Color1 || (Color1 = {}));
-var colorName = Color1[2];
-console.log(colorName);
-var Color2;
-(function (Color2) {
-    Color2[Color2["Red"] = 1] = "Red";
-    Color2[Color2["Green"] = 2] = "Green";
-    Color2[Color2["Blue"] = 4] = "Blue";
-})(Color2 || (Color2 = {}));
-var colorIndex = Color2["Blue"];
-console.log(colorIndex);
+//*******************//
+//*******************//
+//*******************//
+//*******************//
+//*******************//
+//*******************//
+//*******************//
+var C = /** @class */ (function () {
+    function C() {
+        this._len = 0;
+    }
+    Object.defineProperty(C.prototype, "length", {
+        get: function () {
+            return this._len;
+        },
+        set: function (val) {
+            this._len = val;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    return C;
+}());
+var c = new C();
+// c._len = 2;
+c.length = 4;
+console.log("c.lne", c._len);
+// console.log("c.lne", c.);
+//*******************//
+// class Point {
+//   //   x: number;
+//   x!: number;
+//   constructor() {
+//     // this.x = 4;
+//   }
+// }
+//*******************//
+// // const tuple: readonly (number | string)[] = [2024, "Fahad"];
+// let tuple: readonly (number | string)[] = [2024, "Fahad"];
+// tuple = [2025, "Fahad"];
+// console.log("tuple:", tuple);
+//*******************//
+// // let array1: number[] = [1, 2, 3, 4];
+// // let array2: Array<number> = [1, 2, 3, 4];
+// function delay(m: number): Promise<void> {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       resolve();
+//       reject();
+//     }, m);
+//   });
+// }
+// delay(1000)
+//   .then(() => console.log("This delay is over"))
+//   .catch((error) => console.error("Something went wrong:", error))
+//   .finally(() => console.log("This is always executed"));
+//*******************//
+// enum Color {
+//   Red,
+//   Green,
+//   Blue,
+// }
+// var c: Color = Color.Red;
+// enum Color1 {
+//   Red = 1,
+//   Green,
+//   Blue,
+// }
+// var colorName: string = Color1[2];
+// console.log(colorName);
+// enum Color2 {
+//   Red = 1,
+//   Green = 2,
+//   Blue = 4,
+// }
+// var colorIndex = Color2["Blue"];
+// console.log(colorIndex);
 //*******************//
 // const img: HTMLImageElement = document.createElement("img");
 // console.log(Math.floor(1.2));
