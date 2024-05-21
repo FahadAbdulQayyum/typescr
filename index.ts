@@ -7,22 +7,33 @@
 //*******************//
 //*******************//
 //*******************//
-//*******************//
-class C {
-  _len: number = 0;
-  get length() {
-    return this._len;
+class Human {
+  name: string;
+  constructor(name: string) {
+    this.name = name;
   }
-
-  set length(val: number) {
-    this._len = val;
+  getName() {
+    console.log("Hello," + this.name);
   }
 }
-let c: C = new C();
-// c._len = 2;
-c.length = 4;
-console.log("c.lne", c._len);
-// console.log("c.lne", c.);
+let human: Human = new Human("Fahad");
+console.log(human.getName());
+//*******************//
+// class C {
+//   _len: number = 0;
+//   get length() {
+//     return this._len;
+//   }
+
+//   set length(val: number) {
+//     this._len = val;
+//   }
+// }
+// let c: C = new C();
+// // c._len = 2;
+// c.length = 4;
+// console.log("c.lne", c._len);
+// // console.log("c.lne", c.);
 
 //*******************//
 

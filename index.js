@@ -7,28 +7,32 @@
 //*******************//
 //*******************//
 //*******************//
-//*******************//
-var C = /** @class */ (function () {
-    function C() {
-        this._len = 0;
+var Human = /** @class */ (function () {
+    function Human(name) {
+        this.name = name;
     }
-    Object.defineProperty(C.prototype, "length", {
-        get: function () {
-            return this._len;
-        },
-        set: function (val) {
-            this._len = val;
-        },
-        enumerable: false,
-        configurable: true
-    });
-    return C;
+    Human.prototype.getName = function () {
+        console.log("Hello," + this.name);
+    };
+    return Human;
 }());
-var c = new C();
-// c._len = 2;
-c.length = 4;
-console.log("c.lne", c._len);
-// console.log("c.lne", c.);
+var human = new Human("Fahad");
+console.log(human.getName());
+//*******************//
+// class C {
+//   _len: number = 0;
+//   get length() {
+//     return this._len;
+//   }
+//   set length(val: number) {
+//     this._len = val;
+//   }
+// }
+// let c: C = new C();
+// // c._len = 2;
+// c.length = 4;
+// console.log("c.lne", c._len);
+// // console.log("c.lne", c.);
 //*******************//
 // class Point {
 //   //   x: number;
