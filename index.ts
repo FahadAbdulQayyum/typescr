@@ -6,29 +6,35 @@
 //*******************//
 //*******************//
 //*******************//
+class Base {
+  private x: number = 5;
+}
+class Derived extends Base {
+  x = 1; //cannot be changed
+}
 //*******************//
-class General {
-  constructor() {}
-  getName(): void {
-    console.log("Hello, World!");
-  }
-}
+// class General {
+//   constructor() {}
+//   getName(): void {
+//     console.log("Hello, World!");
+//   }
+// }
 
-class Human extends General {
-  name: string;
-  constructor(name: string) {
-    super();
-    this.name = name;
-  }
-  getNamee() {
-    this.name === "Fahad" ? console.log("Hello," + this.name) : this.getName();
-  }
-}
+// class Human extends General {
+//   name: string;
+//   constructor(name: string) {
+//     super();
+//     this.name = name;
+//   }
+//   getNamee() {
+//     this.name === "Fahad" ? console.log("Hello," + this.name) : this.getName();
+//   }
+// }
+// // let human: Human = new Human("Fahad");
 // let human: Human = new Human("Fahad");
-let human: Human = new Human("Fahad");
-let human1: Human = new Human("Fahadd");
-console.log(human.getNamee());
-console.log(human1.getNamee());
+// let human1: Human = new Human("Fahadd");
+// console.log(human.getNamee());
+// console.log(human1.getNamee());
 
 //*******************//
 // class C {
