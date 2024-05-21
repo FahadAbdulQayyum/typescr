@@ -7,17 +7,29 @@
 //*******************//
 //*******************//
 //*******************//
-class Human {
-  name: string;
-  constructor(name: string) {
-    this.name = name;
-  }
-  getName() {
-    console.log("Hello," + this.name);
+class General {
+  constructor() {}
+  getName(): void {
+    console.log("Hello, World!");
   }
 }
+
+class Human extends General {
+  name: string;
+  constructor(name: string) {
+    super();
+    this.name = name;
+  }
+  getNamee() {
+    this.name === "Fahad" ? console.log("Hello," + this.name) : this.getName();
+  }
+}
+// let human: Human = new Human("Fahad");
 let human: Human = new Human("Fahad");
-console.log(human.getName());
+let human1: Human = new Human("Fahadd");
+console.log(human.getNamee());
+console.log(human1.getNamee());
+
 //*******************//
 // class C {
 //   _len: number = 0;

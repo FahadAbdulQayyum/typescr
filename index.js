@@ -1,3 +1,18 @@
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    };
+    return function (d, b) {
+        if (typeof b !== "function" && b !== null)
+            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
 //*******************//
 //*******************//
 //*******************//
@@ -7,17 +22,31 @@
 //*******************//
 //*******************//
 //*******************//
-var Human = /** @class */ (function () {
-    function Human(name) {
-        this.name = name;
+var General = /** @class */ (function () {
+    function General() {
     }
-    Human.prototype.getName = function () {
-        console.log("Hello," + this.name);
+    General.prototype.getName = function () {
+        console.log("Hello, World!");
+    };
+    return General;
+}());
+var Human = /** @class */ (function (_super) {
+    __extends(Human, _super);
+    function Human(name) {
+        var _this = _super.call(this) || this;
+        _this.name = name;
+        return _this;
+    }
+    Human.prototype.getNamee = function () {
+        this.name === "Fahad" ? console.log("Hello," + this.name) : this.getName();
     };
     return Human;
-}());
+}(General));
+// let human: Human = new Human("Fahad");
 var human = new Human("Fahad");
-console.log(human.getName());
+var human1 = new Human("Fahadd");
+console.log(human.getNamee());
+console.log(human1.getNamee());
 //*******************//
 // class C {
 //   _len: number = 0;
