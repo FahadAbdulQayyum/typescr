@@ -1,18 +1,3 @@
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    };
-    return function (d, b) {
-        if (typeof b !== "function" && b !== null)
-            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
 //*******************//
 //*******************//
 //*******************//
@@ -20,33 +5,44 @@ var __extends = (this && this.__extends) || (function () {
 //*******************//
 //*******************//
 //*******************//
-//*******************//
-//*******************//
-var General = /** @class */ (function () {
-    function General() {
+var Privacy = /** @class */ (function () {
+    function Privacy() {
+        this.secretKey = 234983;
     }
-    General.prototype.getName = function () {
-        console.log("Hello, World!");
-    };
-    return General;
+    return Privacy;
 }());
-var Human = /** @class */ (function (_super) {
-    __extends(Human, _super);
-    function Human(name) {
-        var _this = _super.call(this) || this;
-        _this.name = name;
-        return _this;
-    }
-    Human.prototype.getNamee = function () {
-        this.name === "Fahad" ? console.log("Hello," + this.name) : this.getName();
-    };
-    return Human;
-}(General));
+var s = new Privacy();
+// console.log(s.secretKey); // error
+console.log(s["secretKey"]); // alternative solution
+//*******************//
+// class Base {
+//   private x: number = 5;
+// }
+// class Derived extends Base {
+//   x = 1; //cannot be changed
+// }
+//*******************//
+// class General {
+//   constructor() {}
+//   getName(): void {
+//     console.log("Hello, World!");
+//   }
+// }
+// class Human extends General {
+//   name: string;
+//   constructor(name: string) {
+//     super();
+//     this.name = name;
+//   }
+//   getNamee() {
+//     this.name === "Fahad" ? console.log("Hello," + this.name) : this.getName();
+//   }
+// }
+// // let human: Human = new Human("Fahad");
 // let human: Human = new Human("Fahad");
-var human = new Human("Fahad");
-var human1 = new Human("Fahadd");
-console.log(human.getNamee());
-console.log(human1.getNamee());
+// let human1: Human = new Human("Fahadd");
+// console.log(human.getNamee());
+// console.log(human1.getNamee());
 //*******************//
 // class C {
 //   _len: number = 0;

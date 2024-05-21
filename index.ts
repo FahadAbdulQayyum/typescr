@@ -5,13 +5,19 @@
 //*******************//
 //*******************//
 //*******************//
+class Privacy {
+  private secretKey: number = 234983;
+}
+const s = new Privacy();
+// console.log(s.secretKey); // error
+console.log(s["secretKey"]); // alternative solution
 //*******************//
-class Base {
-  private x: number = 5;
-}
-class Derived extends Base {
-  x = 1; //cannot be changed
-}
+// class Base {
+//   private x: number = 5;
+// }
+// class Derived extends Base {
+//   x = 1; //cannot be changed
+// }
 //*******************//
 // class General {
 //   constructor() {}
